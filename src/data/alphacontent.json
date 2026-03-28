@@ -40,7 +40,7 @@
         "Unexpected tenant departures",
         "Property management emergencies"
       ],
-      "note": "No job is too big or too small. We are ready when you need us."
+      "note": "* Not for flooding, spills, sanitation hazards, or bulk garbage removal"
     },
     "products": {
       "description": "Handmade, all-organic, pet-safe solutions."
@@ -68,8 +68,8 @@
       "id": "hero",
       "component": "Hero",
       "props": {
-        "headline": "Clean by Nature, Powered by Pros",
-        "subheadline": "Safe, organic cleaning services for homes and businesses.",
+        "headline": "",
+        "subheadline": "",
         "primaryCTA": {
           "label": "Get a Free Quote",
           "action": "scroll_contact"

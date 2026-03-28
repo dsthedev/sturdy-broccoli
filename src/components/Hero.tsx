@@ -30,19 +30,21 @@ export default function Hero({
           <img
             src={logo}
             alt={`${brand?.name ?? "Brand"} logo`}
-            className="h-16 w-16 object-contain md:h-32 md:w-32 lg:h-40 lg:w-40"
+            className="h-16 w-16 object-contain md:h-32 md:w-32 lg:h-48 lg:w-48"
           />
           <p className="font-heading text-5xl font-semibold text-primary md:text-6xl">
             {brand?.name}
           </p>
         </div>
 
-        {/* <h1 className="font-heading text-4xl leading-tight font-bold text-primary md:text-5xl">
-          {headline}
-        </h1> */}
-        {/* <p className="max-w-2xl text-base text-accent md:text-lg">
-          {subheadline}
-        </p> */}
+        {headline ? (
+          <h1 className="font-heading text-4xl leading-tight font-bold text-primary md:text-5xl">
+            {headline}
+          </h1>
+        ) : null}
+        {subheadline ? (
+          <p className="max-w-2xl text-base text-accent md:text-lg">{subheadline}</p>
+        ) : null}
         <p className="font-heading text-4xl italic text-accent md:text-2xl">
           {brand?.tagline}
         </p>
