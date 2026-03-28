@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "version": "3.0-alpha",
+    "app": "naturpro-web",
+    "schema": "hybrid-content-component",
+    "description": "Unified content + layout + component mapping"
+  },
+  "brand": {
+    "name": "NaturPro",
+    "tagline": "Clean by Nature, Powered by Pros",
+    "contact": {
+      "name": "Sarah",
+      "role": "Owner / Cleaning Specialist",
+      "phone": "(715) 305-1883",
+      "email": "NaturProClean@gmail.com",
+      "serviceArea": "Eau Claire • Lake Hallie • Chippewa Valley"
+    }
+  },
+  "theme": {
+    "colors": {
+      "primary": "#2E7D32",
+      "secondary": "#E8F5E9",
+      "accent": "#43A047"
+    }
+  },
+  "content": {
+    "services": [
+      { "id": "residential", "title": "Residential Cleaning" },
+      { "id": "deep", "title": "Deep Cleaning" },
+      { "id": "move", "title": "Move-In / Move-Out Cleaning" },
+      { "id": "construction", "title": "New Construction Cleaning" },
+      { "id": "commercial", "title": "Small Commercial Cleaning" },
+      { "id": "office", "title": "Boutique Office Cleaning" }
+    ],
+    "emergency": {
+      "title": "24-Hour Emergency Cleaning",
+      "items": [
+        "Last-minute move-outs",
+        "Same-day turnovers",
+        "Unexpected tenant departures",
+        "Property management emergencies"
+      ],
+      "note": "No job is too big or too small. We are ready when you need us."
+    },
+    "products": {
+      "description": "Handmade, all-organic, pet-safe solutions."
+    },
+    "offers": [
+      {
+        "id": "new-client",
+        "headline": "$50 Off First Cleaning",
+        "subtext": "New client special"
+      },
+      {
+        "id": "referral",
+        "headline": "$25 Referral Bonus",
+        "subtext": "For every referral"
+      }
+    ],
+    "trust": [
+      "Locally Owned & Operated",
+      "Eco-Friendly Products",
+      "Reliable Scheduling"
+    ]
+  },
+  "layout": [
+    {
+      "id": "hero",
+      "component": "Hero",
+      "props": {
+        "headline": "Professional Cleaning, Naturally Done Right",
+        "subheadline": "Safe, organic cleaning services for homes and businesses.",
+        "primaryCTA": {
+          "label": "Get a Free Quote",
+          "action": "scroll_contact"
+        },
+        "secondaryCTA": {
+          "label": "Call Now",
+          "action": "tel:(715)305-1883"
+        }
+      }
+    },
+    {
+      "id": "trust",
+      "component": "TrustBar",
+      "dataKey": "trust"
+    },
+    {
+      "id": "services",
+      "component": "ServiceGrid",
+      "dataKey": "services",
+      "props": {
+        "title": "Cleaning Services"
+      }
+    },
+    {
+      "id": "emergency",
+      "component": "HighlightSection",
+      "dataKey": "emergency"
+    },
+    {
+      "id": "offers",
+      "component": "OfferStrip",
+      "dataKey": "offers"
+    },
+    {
+      "id": "contact",
+      "component": "ContactSection",
+      "props": {
+        "title": "Request a Free Quote"
+      }
+    },
+    {
+      "id": "footer",
+      "component": "Footer"
+    }
+  ]
+}

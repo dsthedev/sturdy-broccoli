@@ -1,0 +1,27 @@
+import type { EmergencyData } from "@/types/content"
+
+type HighlightSectionProps = {
+  data?: EmergencyData
+}
+
+export default function HighlightSection({ data }: HighlightSectionProps) {
+  if (!data) return null
+
+  return (
+    <section className="border-b border-border bg-secondary/20">
+      <div className="mx-auto w-full max-w-4xl px-6 py-10 text-center">
+        <h2 className="font-heading text-3xl font-semibold text-primary">
+          {data.title}
+        </h2>
+        <ul className="mx-auto mt-5 max-w-xl space-y-2 text-left text-foreground">
+          {data.items.map((item) => (
+            <li key={item} className="list-inside list-disc">
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-5 text-sm italic text-muted-foreground">{data.note}</p>
+      </div>
+    </section>
+  )
+}
