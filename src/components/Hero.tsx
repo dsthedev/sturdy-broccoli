@@ -1,8 +1,9 @@
 import { buttonVariants } from "@/components/ui/button"
 import logo from "@/assets/naturprologo.png"
-import type { CTA } from "@/types/content"
+import type { Brand, CTA } from "@/types/content"
 
 type HeroProps = {
+  brand?: Brand
   headline?: string
   subheadline?: string
   primaryCTA?: CTA
@@ -16,6 +17,7 @@ function resolveHref(action?: string) {
 }
 
 export default function Hero({
+  brand,
   headline,
   subheadline,
   primaryCTA,
@@ -27,11 +29,11 @@ export default function Hero({
         <div className="flex items-center gap-3">
           <img
             src={logo}
-            alt="NaturPro logo"
+            alt={`${brand?.name ?? "Brand"} logo`}
             className="h-16 w-16 object-contain md:h-20 md:w-20"
           />
           <p className="font-heading text-5xl font-semibold text-primary md:text-6xl">
-            NaturPro
+            {brand?.name}
           </p>
         </div>
 
@@ -42,7 +44,7 @@ export default function Hero({
           {subheadline}
         </p>
         <p className="font-heading text-xl italic text-accent md:text-2xl">
-          Clean by Nature, Powered by Pros
+          {brand?.tagline}
         </p>
         <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
           {primaryCTA ? (

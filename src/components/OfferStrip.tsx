@@ -1,16 +1,17 @@
 import type { OfferItem } from "@/types/content"
 
 type OfferStripProps = {
+  title?: string
   data?: OfferItem[]
 }
 
-export default function OfferStrip({ data = [] }: OfferStripProps) {
+export default function OfferStrip({ title, data = [] }: OfferStripProps) {
   if (data.length === 0) return null
 
   return (
     <section>
       <div className="mx-auto w-full max-w-4xl px-6 py-10 text-center">
-        <h3 className="font-heading text-3xl font-semibold text-accent">Offers</h3>
+        <h3 className="font-heading text-3xl font-semibold text-accent">{title}</h3>
         <ul className="mx-auto mt-5 max-w-xl list-inside list-disc space-y-2 text-left text-foreground">
           {data.map((offer) => (
             <li key={offer.id}>

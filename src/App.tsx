@@ -35,6 +35,7 @@ function RenderSection({ section, contentRoot }: RenderSectionProps) {
       return (
         <section id={section.id} className="w-full">
           <Hero
+            brand={contentRoot.brand}
             headline={props.headline as string | undefined}
             subheadline={props.subheadline as string | undefined}
             primaryCTA={props.primaryCTA as CTA | undefined}
@@ -45,7 +46,11 @@ function RenderSection({ section, contentRoot }: RenderSectionProps) {
     case "TrustBar":
       return (
         <section id={section.id} className="w-full">
-          <TrustBar data={data as string[] | undefined} />
+          <TrustBar
+            title={props.title as string | undefined}
+            brand={contentRoot.brand}
+            data={data as string[] | undefined}
+          />
         </section>
       )
     case "ServiceGrid":
@@ -66,7 +71,10 @@ function RenderSection({ section, contentRoot }: RenderSectionProps) {
     case "OfferStrip":
       return (
         <section id={section.id} className="w-full">
-          <OfferStrip data={data as OfferItem[] | undefined} />
+          <OfferStrip
+            title={props.title as string | undefined}
+            data={data as OfferItem[] | undefined}
+          />
         </section>
       )
     case "ContactSection":
@@ -81,7 +89,11 @@ function RenderSection({ section, contentRoot }: RenderSectionProps) {
     case "Footer":
       return (
         <section id={section.id} className="w-full">
-          <Footer brand={contentRoot.brand} />
+          <Footer
+            brand={contentRoot.brand}
+            codeUrl={props.codeUrl as string | undefined}
+            codeLabel={props.codeLabel as string | undefined}
+          />
         </section>
       )
     default:

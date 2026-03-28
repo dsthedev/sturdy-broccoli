@@ -83,7 +83,10 @@
     {
       "id": "trust",
       "component": "TrustBar",
-      "dataKey": "trust"
+      "dataKey": "trust",
+      "props": {
+        "title": "Why NaturPro"
+      }
     },
     {
       "id": "services",
@@ -101,7 +104,10 @@
     {
       "id": "offers",
       "component": "OfferStrip",
-      "dataKey": "offers"
+      "dataKey": "offers",
+      "props": {
+        "title": "Offers"
+      }
     },
     {
       "id": "contact",
@@ -112,7 +118,11 @@
     },
     {
       "id": "footer",
-      "component": "Footer"
+      "component": "Footer",
+      "props": {
+        "codeLabel": "Heart Plus Code",
+        "codeUrl": "https://github.com"
+      }
     }
   ]
 }

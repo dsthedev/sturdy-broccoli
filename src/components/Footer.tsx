@@ -3,9 +3,11 @@ import { Code2, Heart, Plus } from "lucide-react"
 
 type FooterProps = {
   brand?: Brand
+  codeUrl?: string
+  codeLabel?: string
 }
 
-export default function Footer({ brand }: FooterProps) {
+export default function Footer({ brand, codeUrl, codeLabel }: FooterProps) {
   if (!brand) return null
 
   return (
@@ -19,12 +21,13 @@ export default function Footer({ brand }: FooterProps) {
           <Heart size={16} strokeWidth={2} className="text-red-500" aria-hidden />
           <Plus size={12} strokeWidth={2} className="text-slate-500" aria-hidden />
           <a
-            href="https://github.com"
+            href={codeUrl}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1 underline-offset-2 hover:underline"
           >
             <Code2 size={18} strokeWidth={2} className="" aria-hidden />
+            {codeLabel ? <span>{codeLabel}</span> : null}
           </a>
         </div>
       </div>
