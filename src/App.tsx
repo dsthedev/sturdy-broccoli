@@ -1,5 +1,5 @@
 import contentData from "./data/alphacontent.json"
-import { Fragment } from "react"
+import { Fragment, useEffect, useState } from "react"
 import botanicalBackground from "./assets/bg.png"
 import type {
   ContentRoot,
@@ -91,18 +91,43 @@ function RenderSection({ section, contentRoot }: RenderSectionProps) {
 
 // --- App ---
 export default function App() {
+  const [parallaxOffset, setParallaxOffset] = useState(0)
+
+  useEffect(() => {
+    let frameRequested = false
+
+    const updateParallax = () => {
+      setParallaxOffset(-window.scrollY * 0.12)
+      frameRequested = false
+    }
+
+    const handleScroll = () => {
+      if (frameRequested) return
+      frameRequested = true
+      window.requestAnimationFrame(updateParallax)
+    }
+
+    handleScroll()
+    window.addEventListener("scroll", handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
-    <div className="relative min-h-screen text-foreground">
+    <div
+      className="relative min-h-screen text-foreground"
+      style={{
+        backgroundImage: `url(${botanicalBackground})`,
+        backgroundRepeat: "repeat-y",
+        backgroundSize: "100vw auto",
+        backgroundPosition: `center ${parallaxOffset}px`,
+      }}
+    >
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0.86), rgba(255,255,255,0.86)), url(${botanicalBackground})`,
-          backgroundPosition: "center top, center top",
-          backgroundRepeat: "repeat, repeat-y",
-          backgroundSize: "100% auto, 100% auto",
-          backgroundAttachment: "scroll, fixed",
-        }}
+        className="pointer-events-none absolute inset-0 z-0 bg-white/5 backdrop-blur-[1px]"
       />
 
       <div className="relative z-10">
