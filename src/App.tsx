@@ -1,5 +1,6 @@
-import contentData from "../public/alphacontent.json"
+import contentData from "./data/alphacontent.json"
 import { Fragment } from "react"
+import botanicalBackground from "./assets/bg.png"
 import type {
   ContentRoot,
   CTA,
@@ -91,17 +92,31 @@ function RenderSection({ section, contentRoot }: RenderSectionProps) {
 // --- App ---
 export default function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {content.layout.map((section, index) => (
-        <Fragment key={section.id}>
-          <RenderSection section={section} contentRoot={content} />
-          {index < content.layout.length - 1 ? (
-            <div className="mx-auto w-full max-w-4xl px-6">
-              <Separator />
-            </div>
-          ) : null}
-        </Fragment>
-      ))}
+    <div className="relative min-h-screen text-foreground">
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0.86), rgba(255,255,255,0.86)), url(${botanicalBackground})`,
+          backgroundPosition: "center top, center top",
+          backgroundRepeat: "repeat, repeat-y",
+          backgroundSize: "100% auto, 100% auto",
+          backgroundAttachment: "scroll, fixed",
+        }}
+      />
+
+      <div className="relative z-10">
+        {content.layout.map((section, index) => (
+          <Fragment key={section.id}>
+            <RenderSection section={section} contentRoot={content} />
+            {index < content.layout.length - 1 ? (
+              <div className="mx-auto w-full max-w-4xl px-6">
+                <Separator />
+              </div>
+            ) : null}
+          </Fragment>
+        ))}
+      </div>
     </div>
   )
 }
