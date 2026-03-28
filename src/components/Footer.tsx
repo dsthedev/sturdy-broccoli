@@ -27,7 +27,7 @@ export default function Footer({ brand, codeUrl, codeLabel }: FooterProps) {
             className="inline-flex items-center gap-1 underline-offset-2 hover:underline"
           >
             <Code2 size={18} strokeWidth={2} className="" aria-hidden />
-            {codeLabel ? <span>{codeLabel}</span> : null}
+            {codeLabel ? <span className="sr-only">{codeLabel}</span> : null}
           </a>
         </div>
       </div>

@@ -11,8 +11,8 @@
     "contact": {
       "name": "Sarah",
       "role": "Owner / Cleaning Specialist",
-      "phone": "(715) 305-1883",
-      "email": "NaturProClean@gmail.com",
+      "phone": "715-303-7087",
+      "email": "NaturProCleaners@outlook.com",
       "serviceArea": "Eau Claire • Lake Hallie • Chippewa Valley"
     }
   },
@@ -48,8 +48,8 @@
     "offers": [
       {
         "id": "new-client",
-        "headline": "$50 Off First Cleaning",
-        "subtext": "New client special"
+        "headline": "$50 Off Your First Cleaning Session",
+        "subtext": "New clients only. Applied at booking."
       },
       {
         "id": "referral",
@@ -68,7 +68,7 @@
       "id": "hero",
       "component": "Hero",
       "props": {
-        "headline": "Professional Cleaning, Naturally Done Right",
+        "headline": "Clean by Nature, Powered by Pros",
         "subheadline": "Safe, organic cleaning services for homes and businesses.",
         "primaryCTA": {
           "label": "Get a Free Quote",
