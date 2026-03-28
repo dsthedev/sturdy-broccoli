@@ -1,5 +1,4 @@
 import type { OfferItem } from "@/types/content"
-import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card"
 
 type OfferStripProps = {
   data?: OfferItem[]
@@ -10,17 +9,16 @@ export default function OfferStrip({ data = [] }: OfferStripProps) {
 
   return (
     <section>
-      <div className="mx-auto grid w-full max-w-4xl gap-4 px-6 py-10 md:grid-cols-2">
-        {data.map((offer) => (
-          <Card key={offer.id} className="text-center">
-            <CardContent className="px-5 py-5">
-              <CardTitle className="font-heading text-2xl text-primary">
-                {offer.headline}
-              </CardTitle>
-              <CardDescription className="mt-1">{offer.subtext}</CardDescription>
-            </CardContent>
-          </Card>
-        ))}
+      <div className="mx-auto w-full max-w-4xl px-6 py-10 text-center">
+        <h3 className="font-heading text-3xl font-semibold text-accent">Offers</h3>
+        <ul className="mx-auto mt-5 max-w-xl list-inside list-disc space-y-2 text-left text-foreground">
+          {data.map((offer) => (
+            <li key={offer.id}>
+              <span className="font-semibold">{offer.headline}</span>
+              <span className="text-muted-foreground"> · {offer.subtext}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )
