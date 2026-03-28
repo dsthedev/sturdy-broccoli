@@ -21,7 +21,7 @@ export default function Hero({
   secondaryCTA,
 }: HeroProps) {
   return (
-    <header className="border-b border-border bg-background">
+    <header>
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-6 py-14 text-center">
         <h1 className="font-heading text-4xl leading-tight font-bold text-primary md:text-5xl">
           {headline}

@@ -8,7 +8,7 @@ export default function Footer({ brand }: FooterProps) {
   if (!brand) return null
 
   return (
-    <footer className="bg-secondary/30">
+    <footer>
       <div className="mx-auto w-full max-w-5xl px-6 py-6 text-center">
         <p className="font-heading text-xl text-primary">{brand.name}</p>
         <p className="mt-1 text-sm text-muted-foreground">{brand.tagline}</p>

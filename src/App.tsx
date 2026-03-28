@@ -1,4 +1,5 @@
 import contentData from "../public/alphacontent.json"
+import { Fragment } from "react"
 import type {
   ContentRoot,
   CTA,
@@ -15,6 +16,7 @@ import HighlightSection from "./components/HighlightSection"
 import OfferStrip from "./components/OfferStrip"
 import ContactSection from "./components/ContactSection"
 import Footer from "./components/Footer"
+import { Separator } from "./components/ui/separator"
 
 const content = contentData as ContentRoot
 
@@ -89,13 +91,16 @@ function RenderSection({ section, contentRoot }: RenderSectionProps) {
 // --- App ---
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      {content.layout.map((section) => (
-        <RenderSection
-          key={section.id}
-          section={section}
-          contentRoot={content}
-        />
+    <div className="min-h-screen bg-background text-foreground">
+      {content.layout.map((section, index) => (
+        <Fragment key={section.id}>
+          <RenderSection section={section} contentRoot={content} />
+          {index < content.layout.length - 1 ? (
+            <div className="mx-auto w-full max-w-4xl px-6">
+              <Separator />
+            </div>
+          ) : null}
+        </Fragment>
       ))}
     </div>
   )
