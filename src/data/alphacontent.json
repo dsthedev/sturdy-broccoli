@@ -121,7 +121,7 @@
       "component": "Footer",
       "props": {
         "codeLabel": "Heart Plus Code",
-        "codeUrl": "https://github.com"
+        "codeUrl": "https://github.com/dsthedev/sturdy-broccoli"
       }
     }
   ]
