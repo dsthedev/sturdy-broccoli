@@ -34,12 +34,12 @@
       { "id": "office", "title": "Boutique Office Cleaning" }
     ],
     "emergency": {
-      "title": "24-Hour Emergency Cleaning",
+      "title": "24/7 Emergency Cleaning",
       "items": [
-        "Last-minute move-outs",
-        "Same-day turnovers",
-        "Unexpected tenant departures",
-        "Property management emergencies"
+        { "label": "Last-minute move-outs", "icon": "Truck" },
+        { "label": "Same-day turnovers", "icon": "Clock3" },
+        { "label": "Unexpected tenant departures", "icon": "KeyRound" },
+        { "label": "Property management emergencies", "icon": "Building2" }
       ],
       "note": "* Not for flooding, spills, sanitation hazards, or bulk garbage removal"
     },

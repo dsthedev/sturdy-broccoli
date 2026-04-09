@@ -21,9 +21,14 @@ export type ServiceItem = {
   title: string
 }
 
+export type EmergencyItem = {
+  label: string
+  icon: string
+}
+
 export type EmergencyData = {
   title: string
-  items: string[]
+  items: EmergencyItem[]
   note: string
 }
 
