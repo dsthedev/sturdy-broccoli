@@ -12,7 +12,8 @@
       "name": "Sarah",
       "role": "Owner / Cleaning Specialist",
       "phone": "715-303-7087",
-      "email": "NaturProCleaners@outlook.com",
+      "email": "NaturProClean@gmail.com",
+      "facebook": "https://www.facebook.com/NaturProCleaners",
       "serviceArea": "Eau Claire • Lake Hallie • Chippewa Valley"
     }
   },
@@ -53,14 +54,12 @@
       },
       {
         "id": "referral",
-        "headline": "$25 Referral Bonus",
-        "subtext": "For every referral"
+        "headline": "GIVE $25. GET $25.",
+        "subtext": "Share the clean you love. When you refer a friend to NaturPro, they’ll get $25 off their first clean, and once their appointment is complete, you’ll get $25 off your next service too. It’s an easy, feel-good way to spread the sparkle and save together."
       }
     ],
     "trust": [
-      "Locally Owned & Operated",
-      "Eco-Friendly Products",
-      "Reliable Scheduling"
+      "NaturPro makes every home or office feel fresh, comfortable, and cared for. We use safe, eco-friendly products and detail-focused cleaning to create spaces that look great and feel even better. Whether it’s your family’s home or your business’s workspace, you can count on NaturPro for reliable service, a friendly touch, and results that truly stand out."
     ]
   },
   "layout": [
@@ -76,7 +75,7 @@
         },
         "secondaryCTA": {
           "label": "Call Now",
-          "action": "tel:(715)305-1883"
+          "action": "tel:+17153037087"
         }
       }
     },
@@ -85,7 +84,7 @@
       "component": "TrustBar",
       "dataKey": "trust",
       "props": {
-        "title": "Why NaturPro"
+        "title": "Why Us?"
       }
     },
     {

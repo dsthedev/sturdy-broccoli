@@ -6,6 +6,7 @@ export type Brand = {
     role: string
     phone: string
     email: string
+    facebook: string
     serviceArea: string
   }
 }

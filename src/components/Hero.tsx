@@ -26,15 +26,20 @@ export default function Hero({
   return (
     <header>
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-6 py-14 text-center">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 sm:gap-4">
           <img
             src={logo}
             alt={`${brand?.name ?? "Brand"} logo`}
             className="h-16 w-16 object-contain md:h-32 md:w-32 lg:h-48 lg:w-48"
           />
-          <p className="font-heading text-5xl font-semibold text-primary md:text-6xl">
-            {brand?.name}
-          </p>
+          <div className="flex flex-col items-start text-left">
+            <p className="font-heading text-4xl font-semibold text-primary sm:text-5xl md:text-6xl">
+              {brand?.name}
+            </p>
+            <p className="mt-1 font-heading text-xs italic text-accent sm:text-sm md:text-base">
+              {brand?.tagline}
+            </p>
+          </div>
         </div>
 
         {headline ? (
@@ -45,9 +50,6 @@ export default function Hero({
         {subheadline ? (
           <p className="max-w-2xl text-base text-accent md:text-lg">{subheadline}</p>
         ) : null}
-        <p className="font-heading text-4xl italic text-accent md:text-2xl">
-          {brand?.tagline}
-        </p>
         <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
           {primaryCTA ? (
             <a
